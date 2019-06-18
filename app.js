@@ -7,7 +7,7 @@ GAME RULES:
 - The first player to reach 100 points on GLOBAL score wins the game
 */
 
-const RESET_VALUE = 1;
+const RESET_VALUE = 2;
 
 let scores = [0, 0];
 let activePlayer = 0;
@@ -35,13 +35,15 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 
   diceElement2.src = `dice-${dice2}.png`;
   diceElement2.style.display = 'block';
-
-  if (dice1 !== RESET_VALUE || dice2 !== RESET_VALUE) {
+  console.log(dice1);
+  console.log(dice2);
+  if (dice1 !== RESET_VALUE && dice2 !== RESET_VALUE && dice1 !== dice2) {
     current += dice1 + dice2;
     document.getElementById('current-' + activePlayer).textContent = current;
 
-    if (scores[activePlayer] + current >= 20) {
+    if (scores[activePlayer] + current >= 100) {
       alert(`Player ${activePlayer} won!!!`);
+      changePlayer();
     }
   } else {
     changePlayer();
@@ -55,8 +57,8 @@ const changePlayer = () => {
     .querySelector(`.player-${activePlayer}-panel`)
     .classList.toggle('active');
   activePlayer = +!activePlayer;
-  diceElement1.style.display = 'none';
-  diceElement2.style.display = 'none';
+  // diceElement1.style.display = 'none';
+  // diceElement2.style.display = 'none';
   document
     .querySelector(`.player-${activePlayer}-panel`)
     .classList.toggle('active');
