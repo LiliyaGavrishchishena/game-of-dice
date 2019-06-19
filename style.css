@@ -77,13 +77,13 @@ body {
   content: '\2022';
   font-size: 47px;
   position: absolute;
-  color: orange;
+  color: #ffa500;
   top: -7px;
   right: 10px;
 }
 
 .player-current-box {
-  background-color: orange;
+  background-color: #ffa500;
   color: #fff;
   width: 40%;
   margin: 0 auto;
@@ -100,6 +100,16 @@ body {
 
 .player-current-score {
   font-size: 30px;
+}
+
+.input {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  font-family: Lato;
+  font-weight: 300;
+  color: #ffa500;
+  border: none;
 }
 
 button {
@@ -157,6 +167,14 @@ i {
   transform: translateX(-50%);
   height: 100px;
   box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.1);
+}
+
+#dice1 {
+  top: 150px;
+}
+
+#dice2 {
+  top: 300px;
 }
 
 .winner {
