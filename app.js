@@ -14,6 +14,7 @@ let activePlayer = 0;
 let current = 0;
 const diceElement1 = document.querySelector('#dice1');
 const diceElement2 = document.querySelector('#dice2');
+let winScore;
 
 const initGame = () => {
   document.querySelector('#current-0').textContent = 0;
@@ -22,6 +23,7 @@ const initGame = () => {
   document.querySelector('#score-1').textContent = 0;
   diceElement1.style.display = 'none';
   diceElement2.style.display = 'none';
+  winScore = document.querySelector('#win-score').value;
 };
 
 initGame();
@@ -41,7 +43,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
     current += dice1 + dice2;
     document.getElementById('current-' + activePlayer).textContent = current;
 
-    if (scores[activePlayer] + current >= 100) {
+    if (scores[activePlayer] + current >= winScore) {
       alert(`Player ${activePlayer} won!!!`);
       changePlayer();
     }
