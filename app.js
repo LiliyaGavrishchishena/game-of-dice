@@ -15,6 +15,21 @@ let current = 0;
 const diceElement1 = document.querySelector('#dice1');
 const diceElement2 = document.querySelector('#dice2');
 
+let Gamer = function(name) {
+  this.name = name;
+};
+
+Gamer.prototype.getScore = function() {
+  return this.score;
+};
+
+Gamer.prototype.resetScore = function(score) {
+  this.score = score;
+};
+
+let player1;
+let player2;
+
 const initGame = () => {
   document.querySelector('#current-0').textContent = 0;
   document.querySelector('#current-1').textContent = 0;
@@ -22,6 +37,10 @@ const initGame = () => {
   document.querySelector('#score-1').textContent = 0;
   diceElement1.style.display = 'none';
   diceElement2.style.display = 'none';
+  player1 = new Gamer(prompt('First gamer, enter your name, please!'), '');
+  player2 = new Gamer(prompt('Second gamer, enter your name, please!'), '');
+  document.querySelector('#name-0').textContent = player1.name;
+  document.querySelector('#name-1').textContent = player2.name;
 };
 
 initGame();
