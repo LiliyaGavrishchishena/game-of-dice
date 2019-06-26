@@ -149,7 +149,9 @@ i {
 .btn-hold {
   top: 467px;
 }
-
+.btn-rating {
+  top: 525px;
+}
 .dice {
   position: absolute;
   left: 50%;
@@ -169,4 +171,11 @@ i {
 
 .winner {
   background-color: #f7f7f7;
+}
+
+.input {
+  color: orange;
+  width: 100%;
+  font-size: 24px;
+  text-align: center;
 }

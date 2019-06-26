@@ -12,9 +12,9 @@
       rel="stylesheet"
       type="text/css"
     />
-    <link type="text/css" rel="stylesheet" href="style.css" />
+    <link type="text/css" rel="stylesheet" href="../src/css/styles.css" />
 
-    <title>Game</title>
+    <title>Game of Dice</title>
   </head>
 
   <body>
@@ -37,6 +37,8 @@
         </div>
       </div>
 
+      <input id="input" class="input" type="number" placeholder="Enter your winner score">
+      
       <button class="btn-new">
         <i class="ion-ios-plus-outline"></i>Новая игра
       </button>
@@ -44,11 +46,13 @@
       <button class="btn-hold">
         <i class="ion-ios-download-outline"></i>Сохранить
       </button>
+      <button class="btn-rating"><i class="ion-ios-cog"></i>Рейтинг</button>
+      
 
-      <img src="dice-5.png" alt="Dice" class="dice" id="dice1"/>
-      <img src="dice-5.png" alt="Dice" class="dice" id="dice2"/>
+      <img src="./assets/dice-5.png" alt="Dice" class="dice" id="dice1"/>
+      <img src="./assets/dice-5.png" alt="Dice" class="dice" id="dice2"/>
     </div>
 
-    <script src="app.js"></script>
+    <!-- <script src="dist/main.js"></script> -->
   </body>
 </html>
